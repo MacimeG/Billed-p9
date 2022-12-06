@@ -36,31 +36,6 @@ const onNavigate = (pathname) => {
 
 describe("Given I am connected as an employee", () => {
   describe("When I am on NewBill Page", () => {
-    // test("then mail icon in vertical layout should be highlighted", async ()=>{
-    //   const html = NewBillUI()
-    //   document.body.innerHTML = html
-
-    //   // const newBills = new NewBill({
-    //   //   document,
-    //   //   onNavigate,
-    //   //   store: mockStore,
-    //   //   localStorage: window.localStorage,
-    //   // });
-
-    //   const root = document.createElement("div")
-    //   root.setAttribute("id", "root")
-    //   document.body.append(root)
-    //   router()
-    //   // window.onNavigate(ROUTES_PATH.NewBill)
-
-      
-    //   await waitFor(() => screen.getAllByTestId('icon-mail'))
-    //   const mailIcon = screen.getAllByTestId('icon-mail')
-    //   mailIcon.forEach(icon => {
-    //     expect(icon.className).toBe("active-icon")
-    //     // expect(mailIcon).toBeTruthy()
-    //   })
-    // })
     test("Then i can put some information", () => {
       const html = NewBillUI()
       document.body.innerHTML = html
@@ -85,13 +60,12 @@ describe("Given I am connected as an employee", () => {
         store: mockStore,
         localStorage: window.localStorage,
       });
-      // const regex = /.(jpg|jpeg|png)$/i;
+ 
       const handleChangeFile = jest.fn((e)=> newBills.handleChangeFile(e))
-      // const filePath = "src/assets/images/facturefreemobile.png"
       const buttonFile = screen.getByTestId("file")
       buttonFile.addEventListener("click", handleChangeFile)
       userEvent.click(buttonFile)
-      // expect(buttonFile.value).toMatch(regex);
+  
       expect(handleChangeFile).toHaveBeenCalled();
 
     })
