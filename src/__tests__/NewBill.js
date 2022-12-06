@@ -48,7 +48,6 @@ describe("Given I am connected as an employee", () => {
       });
       const formNewBill = screen.getByTestId('form-new-bill')
       expect(formNewBill).toBeTruthy()
-      // const handleChangeFile = jest.fn(()=> newBills.handleChangeFile())
     })
     test("Then i upload a File", ()=>{
       const html = NewBillUI()
