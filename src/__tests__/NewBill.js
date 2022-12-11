@@ -52,19 +52,19 @@ describe("Given I am connected as an employee", () => {
     test("Then i upload a File", ()=>{
       const html = NewBillUI()
       document.body.innerHTML = html
-
+      // je recupere les information de la page
       const newBills = new NewBill({
         document,
         onNavigate,
         store: mockStore,
         localStorage: window.localStorage,
       });
- 
+      // je simule le click, et j'appel la fonction correspondante
       const handleChangeFile = jest.fn((e)=> newBills.handleChangeFile(e))
       const buttonFile = screen.getByTestId("file")
       buttonFile.addEventListener("click", handleChangeFile)
       userEvent.click(buttonFile)
-  
+      // je verifie si la fonction est bien appeler
       expect(handleChangeFile).toHaveBeenCalled();
 
     })
