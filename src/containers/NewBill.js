@@ -29,6 +29,9 @@ export default class NewBill {
       formData.append('file', file)
       formData.append('email', email)
     }
+    else{
+      alert("veuillez mettre une image au format jpg/png/jpeg svp")
+    }
     this.store
       .bills()
       .create({
