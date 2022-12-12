@@ -87,29 +87,29 @@ describe("Given I am connected as an employee", ()=>{
         localStorage: window.localStorage,
       });
 
-      const validBill = {
-        type:"Vol",
-        name:"Marseille Lyon",
-        date:"2022-12-02",
-        amount:"500",
-        vat:"70",
-        pct:"30",
-        commentary:"test",
-        fileUrl:"../assets/images/facturefreemobile.png",
-        fileName:"facturefreemobile.png",
-        status:"pending"
-      }
+      // const validBill = {
+      //   type:"Vol",
+      //   name:"Marseille Lyon",
+      //   date:"2022-12-02",
+      //   amount:"500",
+      //   vat:"70",
+      //   pct:"30",
+      //   commentary:"test",
+      //   fileUrl:"../assets/images/facturefreemobile.png",
+      //   fileName:"facturefreemobile.png",
+      //   status:"pending"
+      // }
 
-      screen.getByTestId("expense-type").value = validBill.type
-      screen.getByTestId("expense-name").value = validBill.name
-      screen.getByTestId("datepicker").value = validBill.date
-      screen.getByTestId("amount").value = validBill.amount
-      screen.getByTestId("vat").value = validBill.vat
-      screen.getByTestId("pct").value = validBill.pct
-      screen.getByTestId("commentary").value = validBill.commentary
+      // screen.getByTestId("expense-type").value = validBill.type
+      // screen.getByTestId("expense-name").value = validBill.name
+      // screen.getByTestId("datepicker").value = validBill.date
+      // screen.getByTestId("amount").value = validBill.amount
+      // screen.getByTestId("vat").value = validBill.vat
+      // screen.getByTestId("pct").value = validBill.pct
+      // screen.getByTestId("commentary").value = validBill.commentary
 
-      newBills.fileName = validBill.fileName
-      newBills.fileUrl = validBill.fileUrl
+      // newBills.fileName = validBill.fileName
+      // newBills.fileUrl = validBill.fileUrl
 
       newBills.updateBill = jest.fn()
       const handleSubmit = jest.fn((e)=> newBills.handleSubmit(e))
