@@ -30,6 +30,7 @@ export default class NewBill {
       formData.append('email', email)
     }
     else{
+      // ici j'ai rajouté le message d'erreur
       alert("veuillez mettre une image au format jpg/png/jpeg svp")
     }
     this.store

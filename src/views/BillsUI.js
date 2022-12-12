@@ -21,7 +21,7 @@ const row = (bill) => {
 
 const rows = (data) => {
   // return (data && data.length) ? data.map(bill => row(bill)).join("") : ""
-  //FIX bug ici je rajoute le sort, qui va me trier les dates
+  //FIX bug ici je rajoute le sort, qui va me trier les dates, + ajout de originalDate dans la page bills, fonction getBills
   data?.sort((a, b) =>
     (a.originalDate || a.date) < (b.originalDate || b.date) ? 1 : -1
   );

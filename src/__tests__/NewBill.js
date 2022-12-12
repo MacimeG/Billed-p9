@@ -79,7 +79,7 @@ describe("Given I am connected as an employee", ()=>{
     test("Then bill is create", ()=>{
       const html = NewBillUI()
       document.body.innerHTML = html
-
+      // ici j'appel les données mocker via le store
       const newBills = new NewBill({
         document,
         onNavigate,
